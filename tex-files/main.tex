@@ -15,17 +15,24 @@
 		\frametitle{Table of Contents}
 		\tableofcontents
 	\end{frame}
-	\section[Section]{My section}
-	\subsection[Subsection]{My subsection}
-	\subsubsection[Subsubsection]{My subsubsection}
+	
+	\section{What is USpekPy?}
 	\begin{frame}
-		\frametitle{This is the first slide}
-		Here you can put any text/equation etc. 
-		$a^2 + b^2 = c^2$.		
+		\frametitle{What is USpekPy?}
+		\begin{itemize}
+			\item {\color{blue} Python package} to compute mean radiation protection quantities for a simulated x-ray spectrum with uncertainties using Monte Carlo techniques.
+			\item Open source and GPLv3-licensed library compatible with Python 3. 
+			\item Based on {\color{blue} SpekPy}: Python package for modelling the x-ray spectra from x-ray tubes
+		\end{itemize}		
 	\end{frame}
+	
+	\section{Main features of USpekPy}
 	\begin{frame}
-		\frametitle{This is the second slide}
-		\framesubtitle{A bit more information about this}
-		Some random text.		
+		\frametitle{Main features of USpekPy}
+		\begin{itemize}
+		\item Compute {\color{blue} mean values of radiation protection quantities} of an x-ray spectrum simulated using SpekPy: $\overline{E}$, $K_{air}$ and $\overline{h_K}$.
+		\item Compute {\color{blue} mean radiation protection quantities} of an x-ray spectrum simulated using SpekPy {\color{blue} with uncertainties} using Monte Carlo techniques: first and second HVL for Al and Cu, $\overline{E}$, $K_{air}$ and $\overline{h_K}$.
+		\item Perform {\color{blue} batch simulation} to compute the mean values and uncertainties of radiation protection quantities for {\color{blue} several x-ray spectra} simulated with SpekPy.
+		\end{itemize}
 	\end{frame}
 \end{document}
