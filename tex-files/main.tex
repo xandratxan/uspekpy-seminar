@@ -1,31 +1,33 @@
 \documentclass{beamer}
+
 \usetheme[secheader]{Madrid} % Themes without Navigation Bars
 %\usetheme{PaloAlto} % Themes with a table of contents sidebar
 %\usetheme{Copenhagen} % Themes with section and subsection tables
 
-% Manage images
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
-
 \usepackage[table]{xcolor}
 
-% Custom commands
 \newcommand{\highlight}[1]{{\color{blue} #1}}
 
-% Title page and author information
-\title{USpekPy Package}
+\title{An introduction to USpekPy package}
 \subtitle{Uncertainty estimation on protection quantities for x-rays using SpekPy and Monte Carlo techniques}
 \author[X. Campo]{Xandra Campo}
 \institute[LMRI-CIEMAT]{Ionizing Radiation Metrology Laboratory (LMRI) \newline CIEMAT, Spain}
 \date{June 2024}
 
 \begin{document}
+	
 	\maketitle
 	
 	\begin{frame}
 		\frametitle{Table of Contents}
 		\tableofcontents[hideallsubsections]
+		\centering
+		\href{https://forms.gle/uCHj4XH5BJTBqjiQ9}{\beamergotobutton{Python usage poll}}
 	\end{frame}
+	
+	% ---------- PART I: Wellcome to USpekPy! ----------
 	
 	\section{Wellcome to USpekPy!}
 	
@@ -49,10 +51,7 @@
 			\item \highlight{Goal}: Compute mean radiation protection quantities for a simulated x-ray spectrum with uncertainties using Monte Carlo techniques
 			\item Based on \highlight{SpekPy}: Python package for modelling the x-ray spectra from x-ray tubes
 			\href{https://bitbucket.org/spekpy/spekpy_release/wiki/Home}{\beamergotobutton{Go}}
-		\end{itemize}
-		\bigskip
-		\centering
-		\href{https://forms.gle/uCHj4XH5BJTBqjiQ9}{\beamergotobutton{Python usage poll}}		
+		\end{itemize}		
 	\end{frame}
 	
 	\subsection{Main features of USpekPy}
@@ -200,6 +199,8 @@
 		\end{columns}
 	\end{frame}
 	
+	% ---------- PART II: How does USpekPy package work? ----------
+	
 	\section{How does USpekPy package work?}
 	
 	\begin{frame}
@@ -265,7 +266,9 @@
 			\begin{column}{0.4\textwidth}
 				\small
 				$$\overline{E}=\frac{\int_{0}^{\infty}\phi(E)EdE}{\int_{0}^{\infty}\phi(E)dE}$$
+				\bigskip
 				$$K_{air}=\int_{0}^{\infty}\phi(E)\frac{\mu_{tr}}{\rho}(E)EdE$$
+				\bigskip
 				$$\overline{h_K}=\frac{\int_{0}^{\infty}\phi(E)\frac{\mu_{tr}}{\rho}(E)h_K(E)EdE}{\int_{0}^{\infty}\phi(E)\frac{\mu_{tr}}{\rho}(E)EdE}$$
 			\end{column}
 		\end{columns}
@@ -393,7 +396,6 @@
 	\begin{frame}
 		\frametitle{Units and uncertainties convention}
 		\begin{itemize}
-			%\setlength\itemsep{1em}
 			\item All the uncertainties are standard uncertainties (k = 1)
 			\item The units of relative uncertainties are expressed as fraction of one
 		\end{itemize}
@@ -409,7 +411,7 @@
 			Energy&keV\\
 			Fluence&1/cm²\\
 			Mass energy transfer coefficients of air&cm²/g\\
-			Air kerma&uGy\\
+			Air kerma&\textmu Gy\\
 			Mono-energetic K to H conversion coefficients&Sv/Gy\\
 		\end{tabular}
 	\end{frame}
@@ -430,6 +432,8 @@
 		\end{itemize}
 	\end{frame}
 	
+	% ---------- PART III: How to use USpekPy? ----------
+	
 	\section{How to use USpekPy?}
 	
 	\begin{frame}
@@ -440,6 +444,50 @@
 		subsectionstyle=show/show/hide
 		]
 	\end{frame}
+	
+	\subsection{How to install USpekPy?}
+	
+	\begin{frame}
+		\frametitle{How to install USpekPy?}
+		\framesubtitle{Prerequisites}
+		\textbf{1. Prerequisites}
+		\begin{itemize}
+			\item Make sure you have \highlight{Python} installed.
+			\item USpekPy requires Pyhton 3.8 or superior.
+			\item To check the Python version use the next command on your OS terminal:
+		\end{itemize}
+		
+		\begin{block}{}
+			\begin{semiverbatim}
+				\$ python3 --version
+			\end{semiverbatim}
+		\end{block}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{How to install USpekPy?}
+		\framesubtitle{Virtual environment}
+		\textbf{2. Set up a virtual environment}
+		
+		\highlight{Virtual environment}: 
+		Tool built into Python that provides isolated Python environments, which are more practical than installing packages systemwide.
+		It allows to keep a separate directory of installed packages for each of your projects so that they don’t interfere with each other.
+		
+		Navigate to the directory where you're Python project will live.
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{How to install USpekPy?}
+		\framesubtitle{Install USpekPy}		
+		\textbf{3. Install USpekPy}
+		\begin{block}{}
+			\begin{semiverbatim}
+				\$ pip install uspekpy
+			\end{semiverbatim}
+		\end{block}
+	\end{frame}
+	
+	% ---------- PART IV: Wrapping up: What’s next? ----------
 	
 	\section{Wrapping up: What’s next?}
 		
@@ -470,36 +518,26 @@
 	\begin{frame}
 		\frametitle{Let us know what you think}
 		\centering
-		\highlight{Complete our satisfaction survey about this seminar!}
-		
-		Help us make future seminars better.
-		
+		\highlight{Complete our satisfaction survey about this seminar!}\\
+		Help us make future seminars better.\\
 		\bigskip
-		
-		\href{https://forms.gle/zymzqsLidy5uxKQV6}{\beamergotobutton{Satisfaction survey}}
-		
+		\href{https://forms.gle/zymzqsLidy5uxKQV6}{\beamergotobutton{Satisfaction survey}}\\
 		\bigskip
-		
-		\highlight{Contribute to USpekPy package!}
-		
-		This sofware is for you. We want to make it fit better your necesities. Let us know if you find any issue or if you would like to have any new feature in future versions.
-		
+		\highlight{Contribute to USpekPy package!}\\
+		This sofware is for you. We want to make it fit better your necesities. Let us know if you find any issue or if you would like to have any new feature in future versions.\\
 		\bigskip
-		
-		\href{https://github.com/lmri-met/uspekpy/issues}{\beamergotobutton{USpekPy Issues page}}
-		
-		xandra.campo@ciemat.es
-		
+		\href{https://github.com/lmri-met/uspekpy/issues}{\beamergotobutton{USpekPy Issues page}}\\
+		xandra.campo@ciemat.es\\
 		paz.aviles@ciemat.es
 	\end{frame}
 	
 	\begin{frame}
 		\frametitle{Thank you very much!}
 		\centering
-		We’re grateful for your time and attention today. 
-		
-		We appreciate your interest in USpekPy.
-		
+		We’re grateful for your time and attention today. \\
+		\bigskip
+		We appreciate your interest in USpekPy.\\
+		\bigskip
 		Thank you for joining us.
 	\end{frame}
 	
