@@ -449,42 +449,37 @@
 	
 	\begin{frame}
 		\frametitle{How to install USpekPy?}
-		\framesubtitle{Prerequisites}
-		\textbf{1. Prerequisites}
-		\begin{itemize}
-			\item Make sure you have \highlight{Python} installed.
-			\item USpekPy requires Pyhton 3.8 or superior.
-			\item To check the Python version use the next command on your OS terminal:
-		\end{itemize}
+		Steps to install USpekPy using PyCharm IDE:
+		\begin{enumerate}
+			\item Open PyCharm
+			\item Create a new Python project
+			\item Clone the seminar repository to your computer \href{https://github.com/xandratxan/uspekpy-seminar}{\beamergotobutton{Seminar repository}}
+			\item Set up a virtual environment for the project
+			\item Fix SciPy dependency issue
+		\end{enumerate}
+		Now you are ready to go!\\
+		\bigskip
+		\centering
+		\href{https://github.com/xandratxan/uspekpy-seminar\#README}{\beamergotobutton{Detailed guide}}
 		
-		\begin{block}{}
-			\begin{semiverbatim}
-				\$ python3 --version
-			\end{semiverbatim}
-		\end{block}
 	\end{frame}
 	
-	\begin{frame}
-		\frametitle{How to install USpekPy?}
-		\framesubtitle{Virtual environment}
-		\textbf{2. Set up a virtual environment}
-		
-		\highlight{Virtual environment}: 
-		Tool built into Python that provides isolated Python environments, which are more practical than installing packages systemwide.
-		It allows to keep a separate directory of installed packages for each of your projects so that they don’t interfere with each other.
-		
-		Navigate to the directory where you're Python project will live.
-	\end{frame}
+	\subsection{Examples of USpekPy usage}
 	
 	\begin{frame}
-		\frametitle{How to install USpekPy?}
-		\framesubtitle{Install USpekPy}		
-		\textbf{3. Install USpekPy}
-		\begin{block}{}
-			\begin{semiverbatim}
-				\$ pip install uspekpy
-			\end{semiverbatim}
-		\end{block}
+		\frametitle{Examples of USpekPy usage}
+		Using USpekPy to compute integral quantities for x-ray spectra:
+		\begin{enumerate}
+			\item Values for a single case
+			\item Values for a single case using data files
+			\item Values and uncertainties for a single case
+			\item Values and uncertainties for a single case using data files
+			\item Values and uncertainties for several cases using CSV input file
+			\item Values and uncertainties for several cases using Excel input file
+		\end{enumerate}
+		\bigskip
+		\centering
+		\href{https://github.com/xandratxan/uspekpy-seminar\#README}{\beamergotobutton{Detailed guide}}
 	\end{frame}
 	
 	% ---------- PART IV: Wrapping up: What’s next? ----------
